@@ -30,7 +30,7 @@ PostgreSQL (job log)
 ## API
 `POST /send-email` — queues an email job
 ```bash
-curl -X POST https://mellow-comfort-production-737e.up.railway.app/send-email \
+curl -X POST https://your-railway-url.up.railway.app/send-email \
   -H "Content-Type: application/json" \
   -d '{"to": "example@gmail.com", "subject": "hello", "body": "sent via bullmq"}'
 # response
@@ -55,5 +55,5 @@ node server.js   # terminal 1
 node worker.js   # terminal 2
 ```
 
-## Live
+## URL TO USE FOR CURL COMMANDS
 https://mellow-comfort-production-737e.up.railway.app
