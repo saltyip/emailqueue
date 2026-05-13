@@ -1,12 +1,13 @@
 import { Queue } from "bullmq";
+import { URL } from "url";
+
+const redisUrl = new URL(process.env.REDIS_URL || "redis://localhost:6379");
 
 const connection = {
-  //making connection of host and port
-  host: "localhost",
-  port: 6379,
+  host: redisUrl.hostname,
+  port: parseInt(redisUrl.port),
+  password: redisUrl.password || undefined,
 };
 
-export const emailQueue = new Queue("emails", { connection }); //exporting a queue with var = emailQueue and redis name = emails on the connection
-export { connection }; //exporting the connection
-
-//this file creates a queue of bullmq
+export const emailQueue = new Queue("emails", { connection });
+export { connection };
