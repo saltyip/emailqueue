@@ -59,14 +59,15 @@ worker.on("failed", async (job, err) => {
 });
 
 console.log("worker started, waiting for jobs....");
-
-//this file basically its like creating a Worker function that like tells what do with the a job yk like take its this this data then put it in transpoerter etc etc what to do if the thing completes or fails
-//POST /send-email
-//     ↓
-//emailQueue.add()
-//   ↓
-//Redis
-//↓
-//workerorker.js
-// ↓
-//nodemailer sends email
+/**blog:
+*this file basically its like creating a Worker function that like tells what do with the a job yk like take its this this data then put it in transpoerter etc etc what to do if the thing completes or fails
+*POST /send-email
+*     ↓
+*emailQueue.add()
+*   ↓
+*Redis
+*↓
+*workerorker.js
+* ↓
+*nodemailer sends email
+*/
